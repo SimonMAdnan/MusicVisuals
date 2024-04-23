@@ -36,13 +36,13 @@ public class CubeVisual extends Visual
         setFrameSize(256);
 
         startMinim();
-        loadAudio("heroplanet.mp3");
-        //getAp().play();
-        //startListening(); 
+        //loadAudio("heroplanet.mp3");
+        //getAudioPlayer().play();
+        startListening(); 
         
     }
 
-    float smoothedBoxSize = 0;
+    float smoothedBoxSize = 0; 
 
     public void draw()
     {
@@ -55,7 +55,7 @@ public class CubeVisual extends Visual
         translate(0, 0, -250);
                
         float boxSize = 50 + (getAmplitude() * 300);//map(average, 0, 1, 100, 400); 
-        smoothedBoxSize = lerp(smoothedBoxSize, boxSize, 0.2f);        
+        smoothedBoxSize = lerp(smoothedBoxSize, boxSize, 0.6f);        
         if (twocubes)
         {
             pushMatrix();
