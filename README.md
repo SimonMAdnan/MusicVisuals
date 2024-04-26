@@ -12,80 +12,24 @@ Student Number: C22440562
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
-Toothless dancing meme but very cool
-
+Using music to create bunch of 2d items then they change their color and size depending on the music.
+A DVD style bouncing logo where it bounces from side to side chaning size and shape
 
 # Instructions
+Run the code it will start up normally.
+Press Space to restart
 
 # How it works
+It takes a for Loop to display the 2d items radomly across the screen but its colors and size are dependant on the music from the audio buffer.
 
 # What I am most proud of in the assignment
+That it worked. I Wasn't in for the most part of it but i tried to catch up. Had a lot of difficulties 
+trying to start this project from the muic data folder being in the wrong area to where my clases would 
+not load up correctly. Or my pc almost over heating and nearly dying beacuse I for looped something that i shouldn't have. My original idea was to have the Toothless Dancing meme and have that for this project but i ran into difficulties trying to create it.
+I wouldn't say im proud of this project but i did what i could but if i would do it again then i would do it alot better than this.
 
-# Markdown Tutorial
+# Video
+[YouTube](https://youtu.be/-ZCyjt88Cfc)
 
-This is *emphasis*
 
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
-
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
 
