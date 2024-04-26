@@ -4,7 +4,6 @@ import ddf.minim.AudioBuffer;
 import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
-import ddf.minim.analysis.FFT;
 import ie.tudublin.Visual;
 
 public class DriftVeilCity extends Visual
@@ -18,14 +17,8 @@ public class DriftVeilCity extends Visual
     int mode = 0;
 
     float[] lerpedBuffer;
-    float y = 0;
-    float smoothedY = 0;
-    float smoothedAmplitude = 0;
 
-    int height = 1000;
-    int width = 1000;
 
-    FFT fft;
 
     public void keyPressed() {
 		if (key >= '0' && key <= '9') {
@@ -43,8 +36,8 @@ public class DriftVeilCity extends Visual
 
     public void settings()
     {
-        size(height, width, P3D);
-        //fullScreen(P3D, SPAN);
+        //size(height, width, P3D);
+        fullScreen(P3D, SPAN);
     }
 
     public void setup()
@@ -59,16 +52,14 @@ public class DriftVeilCity extends Visual
         ab = ap.mix;
         colorMode(HSB);
 
-        y = height / 2;
-        smoothedY = y;
 
-        lerpedBuffer = new float[width];
+        lerpedBuffer = new float[displayWidth];
 
 
-        x1 = random(0, width);
-		x2 = random(0, width);
-		y1 = random(0, height);
-		y2 = random(0, height);
+        x1 = random(0, 1800);
+		x2 = random(0, 1800);
+		y1 = random(0, 1000);
+		y2 = random(0, 1000);
 
 		float range = 5;
 
@@ -92,38 +83,41 @@ public class DriftVeilCity extends Visual
             stroke(hue, 255, 255);
             fill(hue,255,255);
             
-            circle(random(1000), random(1000), ab.get(i) * 40);
-            
+            circle(random(displayHeight), random(displayWidth), ab.get(i) * random(100));
+            square(random(displayHeight), random(displayWidth), ab.get(i) * random(100)); 
+
         }
     }
 
+
+
     public void drawBounce()
     {
-        strokeWeight(2);
+        strokeWeight(5);
 		stroke(255);
-        fill(255);
+        fill(random(255),255,255);
 		c = (c + 1f) % 255;
-	    ellipse(x1, y1, x2, y2);    
+	    ellipse(x1 ,y1, x2, y2);    
 
 		x1 += x1dir;
 		x2 += x2dir;
 		y1 += y1dir;
 		y2 += y2dir;
 		
-		if (x1 < 0 || x1 > width)
+		if (x1 < 0 || x1 > 1800)
 		{
 			x1dir = - x1dir;
 		}
-		if (y1 < 0 || y1 > height)
+		if (y1 < 0 || y1 > 1000)
 		{
 			y1dir = - y1dir;
 		}
 
-		if (x2 < 0 || x2 > width)
+		if (x2 < 0 || x2 > 1800)
 		{
 			x2dir = - x2dir;
 		}
-		if (y2 < 0 || y2 > height)
+		if (y2 < 0 || y2 > 1000)
 		{
 			y2dir = - y2dir;
 		}
